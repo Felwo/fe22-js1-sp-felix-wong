@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bildgalleri, slutprojekt</title>
+    <link rel="stylesheet" href="./css/stylesheet.css">
+</head>
+<body>
+    <h1>Flickr Image Gallery</h1>
+    <form action="" class="search">
+        <input type="search" class="search-input" placeholder="Input search..">
+        <select name="sort" class="sort">
+            <option selected value="relevance">Sort (Relevance)</option>
+            <option value="relevance">Relevance</option>
+            <option value="interestingness-desc">Interestingness</option>
+            <option value="date-posted-dec">Date Posted</option>
+        </select>
+        <select name="display-amount" class="display-amount">
+            <option selected value="100">Amount (100)</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+            <option value="200">200</option>
+            <option value="200">400</option>
+        </select>
+        <select name="img-size" class="img-size">
+            <option selected value="n">Size (Small)</option>
+            <option value="n">Small</option>
+            <option value="z">Medium</option>
+            <option value="b">Large</option>
+        </select>
+        <button>Search</button>
+    </form>
+
+    <p id="no-results-error-message">No images found. Try something else</p>
+    <p id="general-error-message">Something went wrong. Try again  :/</p>
+
+    <div id="image-container"></div>
+
+</body>
+<script src="./js/script.js"></script>
+</html>
