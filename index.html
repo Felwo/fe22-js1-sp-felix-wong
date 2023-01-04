@@ -16,34 +16,27 @@
         <input type="search" class="search-input" placeholder="Input search..">
         <select name="sort" class="sort">
             <option selected value="relevance">Sort (Relevance)</option>
-            <option value="relevance">Relevance</option>
             <option value="interestingness-desc">Interestingness</option>
             <option value="date-posted-dec">Date Posted</option>
         </select>
         <select name="display-amount" class="display-amount">
-            <option selected value="100">Amount (100)</option>
-            <option value="50">50</option>
+            <option selected value="50">Amount (50)</option>
             <option value="100">100</option>
             <option value="200">200</option>
             <option value="400">400</option>
         </select>
         <select name="img-size" class="img-size">
             <option selected value="n">Size (Small)</option>
-            <option value="n">Small</option>
             <option value="z">Medium</option>
             <option value="b">Large</option>
         </select>
         <button id="search-button">Search</button>
     </form>
 
-    <section class="error-container">
-        <p id="no-input-error-msg">No text input found. Try typing something.</p>
-        <p id="no-images-error-msg">No images found. Try something else.</p>
-        <p id="no-API-response-error-msg">API not responding . Try again later.</p>
-        <p id="default-error-msg">Something went wrong. Try again :/</p>
-    </section>
-
-    <div class='grid' id="img-container"></div>
+    <p id="no-input-error-msg">No text input found. Try typing something.</p>
+    <p id="no-images-error-msg">No images found. Try something else.</p>
+    <p id="no-API-response-error-msg">API not responding . Try again later.</p>
+    <p id="default-error-msg">Something went wrong. Try again :/</p>
 
     <div class="loading-container">
         <h2>L</h2>
@@ -57,10 +50,13 @@
         <h2>.</h2>
         <h2>.</h2>
     </div>
-
+    
+    <div class='grid' id="img-container"></div>
+    
     <div id="popup-container">
         <img src="" alt="inspected element" id="img-inspect">
     </div>
+    <!-- Använt masonry library för responsive image grid layout -->
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script src="./lib/anime.min.js"></script>
     <script src="./js/script.js"></script>
