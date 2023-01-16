@@ -1,6 +1,7 @@
 const key = "1dc9b7d8deb2d4be49537eaff2557ac3";
 const btn = document.querySelector("#search-button");
 
+//when the button is click, grab the different inputs and value so that Flickr images can be shown on the website. 
 btn.addEventListener("click", (event) => {
   event.preventDefault();
 
@@ -55,7 +56,7 @@ btn.addEventListener("click", (event) => {
 
     const url = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${key}&text=${txt}&sort=${sortInput}&per_page=${amountInput}&format=json&nojsoncallback=1`;
 
-    //Fetching the API
+    //Fetching the API and display the images on the HTML
     fetch(url)
       .then((response) => {
         if (response.status >= 200 && response.status < 300) {
